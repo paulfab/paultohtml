@@ -9,8 +9,12 @@ You have serveral possibilites but the two more common are :
 1) It is bad because whenever you want to change something in one file you have to open the other one and make the same change
 2) It is bad because you have to open two files at the same time, and find for the line you want to change where is it in the po files. And it is rendered at run time, so everytime you display the page you have to render it (well you can have cache)
 
+## Two problems
+* Not easy to maintain
+* Two files to maintain
 
 ## How to fix that problem ?
+
  
 Learning three keywords :
 ``` 

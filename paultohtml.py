@@ -1,4 +1,9 @@
+# -*- coding: utf-8 -*-
+
 import sys
+
+print(sys.getdefaultencoding())
+
 
 def create_template(elements):
 	try:
@@ -7,12 +12,12 @@ def create_template(elements):
 		print("Le fichier a traduire n'est pas spécifié")
 		exit()
 	try:
-		fichier = open(fichier_name, 'r')
+		fichier = open(fichier_name, 'r', encoding="utf-8")
 	except:
 		print("Impossible d'ouvrir le fichier: " + fichier_name)
 		exit()
 
-	nb_lang = len(sys.argv) -2
+	nb_lang = len(elements) -2
 	if nb_lang <1 :
 		print("Merci d'indiquer au moins une langue")
 		exit()
@@ -26,7 +31,7 @@ def create_template(elements):
 	file_lang = {}
 
 	for lang in list_lang:
-		file_lang[lang] = open(fichier_name[:fichier_name.rfind(".")]+"_"+lang+".html", "w")
+		file_lang[lang] = open(fichier_name[:fichier_name.rfind(".")]+"_"+lang+".html", "w", encoding="utf-8")
 
 
 	content = fichier.read()

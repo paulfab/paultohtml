@@ -2,36 +2,34 @@
 
 import sys
 
-print(sys.getdefaultencoding())
-
 
 def create_template(elements):
 	try:
 		fichier_name = elements[1]
 	except IndexError :
-		print("Le fichier a traduire n'est pas spécifié")
+		print("The file to be translated is not indicated")
 		exit()
 	try:
-		fichier = open(fichier_name, 'r', encoding="utf-8")
+		fichier = open(fichier_name, 'r')
 	except:
-		print("Impossible d'ouvrir le fichier: " + fichier_name)
+		print("Impossible to open the file : " + fichier_name)
 		exit()
 
 	nb_lang = len(elements) -2
 	if nb_lang <1 :
-		print("Merci d'indiquer au moins une langue")
+		print("Please use at least two languages")
 		exit()
 	
 	list_lang = []
 	for i in elements[2:]:
 		list_lang.append(i)
 	
-	print("Le document sera traduit dans les langues : " + str(list_lang))
+	print("The document is going to be translated in : " + str(list_lang))
 
 	file_lang = {}
 
 	for lang in list_lang:
-		file_lang[lang] = open(fichier_name[:fichier_name.rfind(".")]+"_"+lang+".html", "w", encoding="utf-8")
+		file_lang[lang] = open(fichier_name[:fichier_name.rfind(".")]+"_"+lang+".html", "w")
 
 
 	content = fichier.read()

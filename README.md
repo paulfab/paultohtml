@@ -1,6 +1,6 @@
 # paultohtml
 Let's say you have an html page in one language, and you want to offer this page in another language.
-You have serveral possibilites but the two more common are :
+You have several possibilities but two common ones are :
 1) I create two html files, one for each language
 2) I use gettext and I create a po files to store my translations
 
@@ -70,3 +70,6 @@ name_of_the_file_fr.html
 <p> Mais ce n'est pas loin
 Je peux y aller en marchant</p>
 ```
+
+## BUT
+This is not intended to replace gettext for big websites, but if you have a few pages and only 2 or 3 languages supported it  is much easier.

@@ -1,13 +1,13 @@
-# paultohtml
+# "I want to translate my websites in English"
 Let's say you have an html page in one language, and you want to offer this page in another language.
 You have several possibilities but two common ones are :
 1) I create two html files, one for each language
 2) I use gettext and I create a po files to store my translations
 
-## It is bad 
+## BUT
 
-1) It is bad because whenever you want to change something in one file you have to open the other one and make the same change
-2) It is bad because you have to open two files at the same time, and find for the line you want to change where is it in the po files. And it is rendered at run time, so everytime you display the page you have to render it (well you can have cache)
+1) is bad because whenever you want to change something in one file you have to open the other one and make the same change
+2) is bad because you have to open two files at the same time, and find for the line you want to change where is it in the po files. And it is rendered at run time, so everytime you display the page you have to render it (well you can have cache)
 
 ## Two problems
 * Not easy to maintain
@@ -71,5 +71,5 @@ name_of_the_file_fr.html
 Je peux y aller en marchant</p>
 ```
 
-## BUT
+## Don't overreact
 This is not intended to replace gettext for big websites, but if you have a few pages and only 2 or 3 languages supported it  is much easier.
